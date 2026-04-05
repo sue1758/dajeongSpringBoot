@@ -10,10 +10,10 @@ public class ArticleController {
 
     @GetMapping("/articles/new") // GET 요청: 브라우저에서 이 주소로 접속하면
     public String newArticleForm() {
-        return "articles/new"; // 이 위치의 HTML(뷰 템플릿)을 화면에 띄움
+        return "articles/new"; // 이 위치의 뷰 템플릿을 화면에 띄움
     }
 
-    @PostMapping("/articles/create") // POST 요청: 폼에서 데이터 전송 시 실행됨
+    @PostMapping("/articles/create") // 폼에서 데이터 전송 시 실행됨
     public String createArticle(ArticleForm form) { // 폼에서 넘어온 데이터가 DTO에 자동 바인딩됨
 
         System.out.println(form.toString()); // 넘어온 데이터 확인용 콘솔 출력
